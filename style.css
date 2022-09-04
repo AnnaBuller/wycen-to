@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* PANEL */
+.panel__container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.panel__title {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+/* koniec-PANEL */
+
+/* FORMULARZ */
+.panel__form {
+    margin-bottom: 30px;
+}
+
+.form__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 4%;
+    margin-bottom: 20px;
+}
+
+.form__calculations,
+.panel__counter {
+    width: 48%;
+    min-width: 300px;
+    background: #f4f4f4;
+}
+
+.calculations__container {
+    padding: 20px;
+    max-width: 450px;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form__input {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 5px;
+}
+
+.form__submitBtn {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    /* border: 4px solid rgb(138, 228, 255); */
+    background: rgb(228, 249, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease-out;
+}
+.form__submitBtn:hover {
+    background: rgb(173, 236, 255);
+}
+
+.pricing__rateInput {
+    max-width: 80px;
+}
+
+.textLength__input {
+    max-width: 120px;
+}
+
+/* COUNTER */
+.counter {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.counter__stopWatch {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.counter__buttons {
+    margin-bottom: 20px;
+}
+
+.counter__button {
+    background: #e7e7e7;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.counter__input {
+    width: 80px;
+}
+
+/* SUMMARY */
+.summary__info {
+    font-weight: bold;
+}
+
+.summary__clientDesc {
+    margin-top: 30px;
+}
+
+/* CHECKBOX */
+.customTime__inputs {
+    margin-top: 10px;
+    display: none;
+}
+.customTime__checkbox:checked ~ .customTime__inputs {
+    display: block;
+}
+
+@media only screen and (max-width: 800px) {
+    .form__calculations,
+    .panel__counter {
+        width: 90%;
+    }
+    .form__calculations {
+        margin-bottom: 20px;
+    }
+    .calculations__container {
+        margin: 0 auto;
+    }
+}

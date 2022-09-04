@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Wyceń zlecenie</title>
+    </head>
+    <body>
+        <main class="panel">
+            <h1 class="panel__title">Wyceń swoje zlecenie 💰</h1>
+            <div class="panel__container">
+                <form class="panel__form form">
+                    <div class="form__container">
+                        <div class="form__calculations calculations">
+                            <div class="calculations__container pricing">
+                                <p class="pricing__title">Sposób rozliczenia:</p>
+                                <label
+                                    for="page"
+                                    class="form__label pricing__pageLabel"
+                                >
+                                    <input
+                                        name="pricing"
+                                        id="page"
+                                        type="radio"
+                                        class="form__radio pricing__pageInput"
+                                        value="1800"
+                                        checked
+                                    />
+                                    za stronę – 1800 zzs</label
+                                >
+                                <label
+                                    for="sheet"
+                                    class="form__label pricing__sheetLabel"
+                                >
+                                    <input
+                                        name="pricing"
+                                        id="sheet"
+                                        type="radio"
+                                        class="form__radio pricing__sheetInput"
+                                        value="40000"
+                                    />
+                                    za arkusz – 40 tys. zzs</label
+                                >
+                                <label class="form__label pricing__rateLabel"
+                                    >Twoja stawka:
+                                    <input
+                                        min="0"
+                                        name="rate"
+                                        type="number"
+                                        class="form__input pricing__rateInput"
+                                    />
+                                    zł</label
+                                >
+                            </div>
+                            <div class="calculations__container textLength">
+                                <label
+                                    class="form__label textLength__sampleLabel"
+                                    >Długość próbki:
+                                    <input
+                                        min="0"
+                                        name="sample"
+                                        type="number"
+                                        class="form__input textLength__input textLength__sampleInput"
+                                    />
+                                    zzs</label
+                                >
+                                <label
+                                    class="form__label textLength__totalLengthLabel"
+                                    >Długość całego tekstu:
+                                    <input
+                                        min="0"
+                                        name="totalLength"
+                                        type="number"
+                                        class="form__input textLength__input textLength__totalLengthInput"
+                                    />
+                                    zzs</label
+                                >
+                            </div>
+                        </div>
+                        <section class="panel__counter counter">
+                            <div id="counter" class="counter__container">
+                                <p>Czas sprawdzania próbki:</p>
+                                <div id="stopWatch" class="counter__stopWatch">
+                                    00 : 00 : 00
+                                </div>
+                                <div class="counter__buttons">
+                                    <button
+                                        id="start"
+                                        class="counter__button counter__start"
+                                    >
+                                        Start
+                                    </button>
+                                    <button
+                                        id="stop"
+                                        class="counter__button counter__stop"
+                                        disabled
+                                    >
+                                        Stop
+                                    </button>
+                                    <button
+                                        id="reset"
+                                        class="counter__button counter__reset"
+                                        disabled
+                                    >
+                                        Reset
+                                    </button>
+                                </div>
+                                <div class="counter__customTime customTime">
+                                    <input
+                                        id="customTime"
+                                        name="customTime"
+                                        type="checkbox"
+                                        class="form__input customTime__checkbox"
+                                    /><label
+                                        for="customTime"
+                                        class="counter__label customTime__label"
+                                    >
+                                        Chcę wpisać czas ręcznie</label
+                                    >
+                                    <div class="customTime__inputs">
+                                        <label
+                                            class="counter__label customTime__label--hours"
+                                        >
+                                            <input
+                                                name="customTimeHours"
+                                                type="number"
+                                                class="form__input counter__input customTime__input--hours"
+                                            />
+                                            godzin</label
+                                        >
+                                        <label
+                                            class="counter__label customTime__label--minutes"
+                                        >
+                                            <input
+                                                name="customTimeMinutes"
+                                                type="number"
+                                                class="form__input counter__input customTime__input--minutes"
+                                            />
+                                            minut</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <button type="submit" class="form__submitBtn">
+                        Podsumuj
+                    </button>
+                </form>
+                <section class="panel__summary summary">
+                    <p class="summary__timeDesc">
+                        Praca nad tym tekstem zajmie Ci:
+                        <span class="summary__info summary__time"> – </span>.
+                    </p>
+                    <p class="summary__priceDesc">
+                        Wycena tego zlecenia to:
+                        <span class="summary__info summary__totalPrice">
+                            –
+                        </span>
+                        zł.
+                    </p>
+                    <p class="summary__pricePerHourDesc">
+                        Podczas jego realizacji będziesz zarabiać
+                        <span class="summary__info summary__hourPrice">
+                            –
+                        </span>
+                        zł/h*.
+                    </p>
+                    <p class="summary__clientDesc">
+                        * Przy ostatecznej wycenie uwzględnij czas poświęcony na
+                        kontakt z klientem i wdrażanie jego sugestii.
+                    </p>
+                </section>
+            </div>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
