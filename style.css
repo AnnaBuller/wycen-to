@@ -16,7 +16,8 @@ p {
 /* PANEL */
 .panel__container {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
+    max-width: 1000px;
 }
 
 .panel__title {
@@ -137,7 +138,10 @@ p {
     display: block;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1060px) {
+    .panel__container {
+        width: 80%;
+    }
     .form__calculations,
     .panel__counter {
         width: 90%;
